@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app{
+  justify-self: center;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.horizontalnav{
   display: flex;
-  flex-direction: column;
+  background-color: rgb(245, 241, 238);
+  position: sticky;
+  text-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1%;
+  border-radius: 0 0 10px 10px;
+}
+
+.grid{
+  margin-top: 1%;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+  font-size: small;
+  height: 800px;
+  overflow: scroll;
+}
+
+.menu ul{
+  background-color: #f1f1f1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li{
+  padding: 1%;
+  font-size: large;
+  text-align: left;
+}
+
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: rgb(13, 81, 112);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+li a:hover:not(.active) {
+  background-color: red;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main {
+  background-color: rgb(13, 81, 112);
+  color: antiquewhite;
+  float: left;
+  width: 60%;
+  height: 800px;
+  padding: 5%;
+  overflow: scroll;
+  border: 1px solid gold;
+  border-radius: 50px;
+}
+
+.right {
+  background-color:rgb(245, 241, 238);
+  float: right;
+  width: 20%;
+  text-align: center;
+  font-size: small;
+  text-justify: distribute;
+}
+
+.bottombar{
+  background-color:bisque;
+  text-align:center;
+  padding:1px;
+  margin-top:7px;
+}
+
+.social > a{
+  background-color: DodgerBlue;
+  color: white;
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+    margin: 1%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu ul{
+    height: 150px;
+    overflow: scroll;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* For full phones: */
+  .app{
+    width: 60%;
+    margin: 20%;
+    margin-top: .5%;
+    margin-bottom: 1%;
+  }
+
+  .menu .main{
+    height: 800px;
+    overflow: scroll;
   }
 }
